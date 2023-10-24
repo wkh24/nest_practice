@@ -1,0 +1,41 @@
+###로그인
+POST http://localhost:3000/auth/login
+content-type: application/json
+
+{
+  "email" : "testemail@test.com",
+  "password" : "testpassword1@"
+}
+
+### 로그인 2: LoginGuard
+POST http://localhost:3000/auth/login2
+content-type: application/json
+
+{
+  "email" : "testemail@test.com",
+  "password" : "testpassword1@"
+}
+
+### Guard 테스트
+GET http://localhost:3000/auth/test-guard
+
+### 로그인 3
+POST http://localhost:3000/auth/login3
+content-type: application/json
+
+{
+  "email" : "testemail@test.com",
+  "password" : "testpassword1@"
+}
+
+### 로그인 3
+POST http://localhost:3000/auth/login3
+content-type: application/json
+
+{
+  "email" : "testemail@test.com",
+  "password" : "testpassword1!"
+}
+
+### 인증 성공하는지 테스트
+GET http://localhost:3000/auth/test-guard2
